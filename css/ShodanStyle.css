@@ -1,0 +1,689 @@
+/**
+ * Eric Meyer's CSS Reset
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; 
+}
+
+article, aside, details, figcaption, figure, 
+footer, footer-x, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body { 
+	background: #000 url('http://chat.thecolorless.net/img/shodan.jpg') left fixed;
+	font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 13px; 
+	line-height: 18px; 
+	color: #555; 
+	position: relative; -webkit-font-smoothing: antialiased; 
+}
+
+.clearfix:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/**
+ * Layout begin
+ */
+
+body {
+	background: #000 url('http://chat.thecolorless.net/img/shodan.jpg') left fixed;
+    color: #fff;
+    text-shadow: #000 1px 1px 0;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    overflow-y: scroll;
+}
+
+#header {
+    width: 100%;
+	position: fixed;
+    left: 0;
+    z-index: 10;
+}
+
+ #footer {
+    right: 10px;
+	position: fixed;
+    z-index: 10;
+}
+ 
+a:link, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: inherit;
+    text-decoration: underline;
+}
+
+#header {
+    top: 0;
+    height: 100px;
+    background: #000;
+    border-bottom: 1px solid #fff;
+    color: #111;
+    text-shadow: #ccc 1px 1px 0;
+}
+
+#footer {
+    bottom: 0;
+    background: transparent;
+    color: #ddd;
+    text-transform: uppercase;
+    text-align: right;
+    text-shadow: -1px 0 #000, 0 -1px #000;
+}
+
+#footer-x {
+    color: #ddd;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: -1px 0 #000, 0 -1px #000;
+}
+
+#footer span, #footer a {
+    text-transform: none;
+    color: #fff;
+}
+
+#footer-x span, #footer-x a {
+    text-transform: none;
+    color: #fff;
+}
+
+#header #nav, #header form, .page, #footer ul {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    min-width: 320px;
+}
+
+#header #nav > ul, #footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#header #nav > ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#header #nav > ul:after, #footer ul:after, #footer-x ul:after, .subscription li:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+#header #nav a.logo {
+    font-family: 'Tondu-Beta', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-shadow: #000 1px 1px 0;
+}
+
+#header #nav a.logo:hover {
+    font-family: 'Tondu-Beta', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+	color: #fff;
+    text-shadow: #fff 1px 1px 0;
+}
+
+#header #nav > ul > li {
+    display: inline-block;
+}
+
+#footer ul li {
+    display: inline-block;
+    padding: 5px;
+}
+
+#footer-x ul li {
+    display: inline-block;
+    padding: 5px;
+}
+
+#header #nav ul li.rightest {
+    float: right;
+    text-align: right;
+}
+
+#header form {
+    text-align: center;
+	display: block;
+}
+
+#header form input[type=text] {
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-width: 2px 0 2px 2px;
+    border-style: solid;
+    border-color: #5a5a5a;
+    color: #5a5a5a;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    width: 84%;
+    padding: 5px;
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#header form input[type=text]:focus {
+    outline: none;
+}
+
+.message {
+    position: relative;
+}
+
+label{
+  display:inline;
+}
+
+#header form button {
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 2px 2px 2px 0;
+    border-style: solid;
+    border-color: #5a5a5a;
+    background: #eee url('http://chat.thecolorless.net/img/button_grad.png') repeat-x center;
+    font-weight: 700;
+    color: #5a5a5a;
+    font-size: 16px;
+	width: 15%;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 0px;
+	display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#header form button:hover {
+    background-color: #fff
+}
+
+#header form button:active {
+    position: relative;
+    bottom: -1px;
+    background-color: #ddd;
+}
+
+.subscription, .users, .auth, .activity {
+    list-style: none;
+    padding-left: 0;
+}
+
+.page {
+    margin-top: 120px;
+    padding-bottom: 10px;
+}
+
+.subscription li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.subscription address {
+    display: block;
+    float: left;
+}
+
+.subscription .article {
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    max-width: 406px;
+    border: 3px solid #fff;
+    background: #222223 url('/img/bubble_grad.png') repeat-x center;
+    padding: 20px;
+    float: left;
+    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 0;
+    min-height: 1.5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.subscription .article a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px dashed #bbb;
+}
+
+.subscription .article a:hover {
+    border-bottom-color: transparent;
+}
+
+.subscription .triangle {
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent #fff transparent transparent;
+    border-style: solid;
+    border-width: 6px 16px;
+    position: absolute;
+    top: 25px;
+    left: 76px;
+    -webkit-transform: rotate(360deg);
+}
+
+.subscription .mention .article {
+    -webkit-box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+    -webkit-animation: pulse 1s linear infinite;
+    -moz-animation: pulse 1s linear infinite;
+}
+
+.subscription .nsfw .article {
+	border-color: #1dc443;
+}
+
+.subscription .nsfw .triangle {
+	border-color: transparent #1dc443 transparent transparent;
+}
+
+.subscription .triangle span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent #222223 transparent transparent;
+    border-style: solid;
+    border-width: 5px 15px;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    -webkit-transform: rotate(360deg);
+}
+
+.subscription address .avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid #fff;
+    background: transparent;
+    position: relative;
+}
+
+.subscription address .avatar img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.subscription address > a {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    width: 68px;
+    overflow: visible;
+}
+
+.subscription address .avatar a {
+    width: 60px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    position: absolute;
+    font-style: normal;
+    font-weight: 900;
+    padding: 2px;
+    top: 8px;
+    text-align: center;
+    display: none;
+}
+
+.subscription address .avatar a[data-kick] {
+    top: auto;
+    bottom: 4px;
+}
+
+.subscription address .avatar a:hover {
+    background-color: rgba(30, 30, 30, 0.8);
+    text-decoration: none;
+}
+
+.subscription address .avatar:hover {
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.subscription address .avatar:hover a {
+    display: block
+}
+
+.emote {
+	border:0px;
+	background: transparent;
+	font-size: 14px;
+}
+
+.emote .author {
+	color: #DDD;
+}
+
+.emote .action {
+	color: #999;
+}
+
+.symbol-nsfw {
+    color: #1dc443;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    border: 1px solid #1dc443;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 1px;
+    margin-right: 10px;
+}
+
+.info {
+    text-align: center;
+    border-bottom: 1px solid #333;
+    color: #999;
+    border-top: 1px solid #333;
+    padding: 5px 0;
+}
+
+.back {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 10px;
+    border-radius: 0px;
+    border: 3px solid #5a5a5a;
+    background: #1dc443;
+    font-weight: 700;
+    color: #5a5a5a;
+    padding: 0px 252px;
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+	
+}
+
+.back:hover {
+    background-color: #116c27;
+    text-decoration: none;
+}
+
+.users li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.users li a {
+    display: block;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.users li a:hover {
+    text-decoration: none;
+}
+
+.users li a strong {
+    font-weight: bold;
+    display: block;
+}
+
+.users li a img {
+    display: block;
+    float: left;
+    border: 2px solid #222;
+    margin-right: 10px;
+}
+
+.users li:last-child {
+    border-bottom: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+a.dropdown-toggle {
+    position: relative;
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: none;
+    padding: 4px 6px;
+}
+
+.dropdown.open .dropdown-toggle {
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #333;
+}
+
+a.dropdown-toggle:hover {
+    text-decoration: none;
+    background-color: #444;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    min-width: 160px;
+    text-align: left;
+    margin-top: 2px;
+    background: #333;
+    border: 1px solid #000;
+    border-top: 0;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    color: #fff;
+}
+
+.dropdown-menu li {
+    padding: 4px 6px;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.dropdown-menu li:first-child {
+    -webkit-border-top-left-radius: 6px;
+    -moz-border-top-left-radius: 6px;
+    border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-top-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.dropdown-menu li:last-child {
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-bottom-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.dropdown-menu li:hover {
+    background: #8F402D;
+}
+
+.dropdown-menu li a {
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+/*======Begin Radio=======*/
+
+#radio {
+    position:fixed;
+    bottom:30px;
+    right:20px;
+    border: 0;
+    width:340px;
+    height:135px;
+}
+
+
+
+/*=============================*/
+
+#loading {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 52%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    z-index: 30;
+    padding: 5px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/*
+@license
+ * MyFonts Webfont Build ID 940303, 2011-08-15T06:42:48-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Tondu Beta
+ * URL:http://new.myfonts.com/fonts/northernblock/tondu/tondu-beta/
+ * Foundry: The Northern Block
+ * Copyright: Copyright (c) 2011 by Jonathan Hill. All rights reserved.
+ * License: http://www.myfonts.com/viewlicense?1056
+ * Licensed pageviews: unlimited/month
+ * CSS font-family: Tondu-Beta
+ * CSS font-weight: normal
+ * CSS font-style: normal
+ *
+ * (c) 2011 Bitstream Inc
+*/
+
+
+@font-face{
+	font-family: 'Tondu-Beta';
+	src: url('http://whentheycry.de/shodan/webfonts/eot/style_201193.eot?#iefix') format('embedded-opentype'),
+         url('http://whentheycry.de/shodan/webfonts/woff/style_201193.woff') format('woff'),
+         url('http://whentheycry.de/shodan/webfonts/ttf/style_201193.ttf') format('truetype'),
+         url('http://whentheycry.de/shodan/webfonts/svg/style_201193.svg#Tondu-Beta') format('svg');
+}
+
+@-webkit-keyframes pulse {       
+	0% {
+		-webkit-box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+	}
+	50% {
+		-webkit-box-shadow: 0 0 32px rgba(255, 255, 255, 0.5);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+	}
+}
+
+@-moz-keyframes pulse {       
+	0% {
+		-moz-box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+	}
+	50% {
+		-moz-box-shadow: 0 0 32px rgba(255, 255, 255, 0.5);
+	}
+	100% {
+		-moz-box-shadow: 0 0 16px rgba(255, 255, 255, 1);
+	}
+}

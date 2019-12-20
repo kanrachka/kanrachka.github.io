@@ -1,0 +1,194 @@
+@media screen and (max-width:480px) { 
+    .subscription address {
+        height: 40px;
+    }
+
+    .subscription address > a {
+        font-weight: 700;
+        left: 5px;
+        position: relative;
+        text-align: left;
+        text-overflow: clip;
+        top: -18px;
+        width: 38px;
+    }
+
+    .subscription address .avatar {
+        height: 38px;
+        margin-left: 3px;
+        width: 38px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+	
+	.subscription address .avatar img {
+		border-radius: 12px;
+	}
+	
+    .subscription address .avatar:hover a {
+        display: none;
+    }
+
+    .subscription .article {
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        float: none;
+        margin-bottom: 0px;
+        margin-left: 50px;
+        max-width: 380px;
+        padding: 10px;
+    }
+
+    .subscription li {
+        margin-bottom: 3px;
+    }
+
+    .subscription .triangle {
+        display: none;
+    }
+
+    .subscription .triangle span {
+        display: none;
+    }
+
+    #header #nav .logo {
+        display: none
+    }
+
+    #header {
+        height: 90px
+    }
+
+    .page {
+        margin-top: 110px
+    }
+
+    #header #nav, #header form, .page, #footer ul {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #header form input[type=text] {
+        width: 70%;
+        float: left;
+        margin: 5px 0;
+    }
+
+    #header form button {
+        display: block;
+        float: right;
+        width: 28%;
+        padding: 5px;
+        margin: 5px 0;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+    #radio {
+        display:none;
+    }
+
+	.current-sound {
+        display:none;
+	}	
+}
+
+@media screen and (max-height:480px) { 
+    .subscription address {
+        height: 40px;
+    }
+
+    .subscription address > a {
+        font-weight: 700;
+        left: 5px;
+        position: relative;
+        text-align: left;
+        text-overflow: clip;
+        top: -18px;
+        width: 38px;
+    }
+
+    .subscription address .avatar {
+        border: 3px solid #EEEEEE;
+        height: 38px;
+        margin-left: 3px;
+        width: 38px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+
+    .subscription address .avatar:hover a {
+        display: none;
+    }
+
+    .subscription .article {
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        float: none;
+        margin-bottom: 0px;
+        margin-left: 50px;
+        max-width: 380px;
+        padding: 10px;
+    }
+
+    .subscription li {
+        margin-bottom: 3px;
+    }
+
+    .subscription .triangle {
+        display: none;
+    }
+
+    .subscription .triangle span {
+        display: none;
+    }
+
+    #header #nav .logo {
+        display: none
+    }
+
+    #header {
+        height: 90px
+    }
+
+    .page {
+        margin-top: 110px
+    }
+
+    #header #nav, #header form, .page, #footer ul {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #header form input[type=text] {
+        width: 70%;
+        float: left;
+        margin: 5px 0;
+    }
+
+    #header form button {
+        display: block;
+        float: right;
+        width: 28%;
+        padding: 5px;
+        margin: 5px 0;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+    #radio {
+        display:none;
+    }
+}

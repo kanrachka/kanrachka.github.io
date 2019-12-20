@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>The Colorless Chat</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" type="text/css" href="/css/BorderlessStyle.css?v=0.6.1" />
+		<link rel="stylesheet" type="text/css" href="/css/BorderlessMini.css?v=0.2" />
+
+		<script src="/js/vendor/json2.js"></script>
+		<script src="/js/vendor/jquery.js"></script>
+		<script src="/js/vendor/signals.js"></script>
+		<script src="/js/vendor/director.js"></script>
+		<script src="/js/vendor/bootstrap.dropdown.js"></script>
+
+		<script src="/js/connection.js?v=0.2"></script>
+		<script src="/js/reconnector.js?v=0.0"></script>
+		<script src="/js/export.js?v=0.1"></script>
+		<script src="/js/hex.js?v=0.0"></script>
+		<script src="/js/userlist.js?v=0.0"></script>
+		<script src="/js/chat.js?v=0.8.1"></script>
+
+		<script>
+			$(function() {
+				$('#post input').focus();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="loading"><img src="/img/loading.gif" alt="Communicating&hellip;" width="32" height="32" /></div>
+
+		<div id="wrapper">
+			<div id="header">
+				<div id="nav">
+					<ul class="top-menu">
+						<li class="dropdown">
+								<a class="dropdown-toggle current-channel" data-toggle="dropdown" href="#">Channel: /main/</a>
+								<ul class="dropdown-menu channels"></ul>
+						</li>
+						<li class="dropdown">
+								<a class="dropdown-toggle current-color" data-hex="null" data-toggle="dropdown" href="#">Color: Custom</a>
+								<ul class="dropdown-menu colors"></ul>
+						</li>
+						<!--
+						<li class="dropdown">
+								<a class="dropdown-toggle current-connection" data-toggle="dropdown" href="#">WebSocket</a>
+								<ul class="dropdown-menu connection-types">
+									<li data-type="websocket">WebSocket</li>
+									<li data-type="comet">Comet</li>
+								</ul>
+						</li>
+						-->
+						<li class="dropdown">
+								<a class="dropdown-toggle current-mode" data-toggle="dropdown" href="#">Mode</a>
+								<ul class="dropdown-menu colorless-modes">
+									 <li><a href="index.html">Default</a></li>
+									 <li><a href="Durarara!!.html">Durarara!!</a></li>
+									 <li><a href="Durarara!!x2 Shou.html">Durarara!!x2 Shou</a></li>
+									 <li><a href="compact.html">Compact</a></li>
+									 <li><a href="shodan.html">SHODAN</a></li>
+									 <li><a href="winter.html">Winter</a></li>
+								</ul>
+						</li>
+						<li class="dropdown">
+								<a class="dropdown-toggle current-sound" href="#" data-toggle="sound">Sound: on</a>
+						</li>
+						<li class="rightest">
+							<a href="http://thecolorless.net" class="logo" target="_blank">The Colorless</a>
+						</li>
+					</ul>
+				</div>
+				<form class="publish" method="post" action="/chat/pub">
+					<input class="message" type="text" autocomplete="off" />
+					<button>Post!</button>
+				</form>
+			</div>
+
+			<div class="page">
+				<a href="#" class="back">&laquo; Back to the messages</a>
+
+				<ul class="subscription"></ul>
+
+				<div class="users">
+					<ul></ul>
+				</div>
+
+				<div class="auth">
+					<p>You are not logged in, possibly even not registered on the Colorless yet. You can go back and post as an anonymous user, but you will have an auto-generated name.</p>
+				</div>
+
+				<div class="activity">
+					<div class="activity-chart"></div>
+				</div>
+			</div>
+            <iframe src="http://radio.thecolorless.net" id="radio"></iframe>
+			<div id="footer">
+				<ul>
+					<li>
+						<span class="status">&ndash;</span>
+					</li>
+					<li>
+						Online:
+						<span class="online">&ndash;</span>
+					</li>
+					<li>
+						<a href="javascript:;" data-toggle="export">Export</a>
+					</li>
+					<li>
+						<a href="#/users">See who is online</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<audio autobuffer id="bling" style="visibility:hidden"><source src="/bling.ogg"><source src="/bling.mp3"></audio>
+
+		<script>
+			window._gaq  = [['_setAccount','UA-7104252-6'],['_trackPageview'],['_trackPageLoadTime'],['_setDomainName', '.thecolorless.net']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
+</html>
